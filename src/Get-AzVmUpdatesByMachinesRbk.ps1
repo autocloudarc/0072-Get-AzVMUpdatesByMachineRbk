@@ -71,12 +71,12 @@ param
     [int]$separatorWidth = 100, # The width of the separator line
     [string]$doubleSeparator = ("-"*$separatorWidth), # The separator used to separate the title from the report
     [string]$singleSeparator = ("-"*$separatorWidth), # The separator used to separate the report sections
-	[string]$automationAccount = "aaa-09512023-11", # Name of automation account (for future use after MVP is validated)
-	[string]$sub = "maic-azr-dev-sub-01", # Name of authentication subscription with $automationAccount resource
-	[string]$subId = "51bf817c-66af-4ca8-bcac-13d3df80171a", # Subscription Id of authentication subscription
-	[string]$tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47", # Tenant Id from which to enumerate target subscriptions for update management history information
-	[string]$staResourceGroup = "rg11", # Replace with <your> actual resource group name which contains the $automation account
-    [string]$storageAccountName = "09512023", # Replace with <your> actual storage account name where you want to host the reports. The container name is 'reports'
+	[string]$automationAccount = "adv-aaa-01", # Name of automation account
+	[string]$sub = "demo-azr-dev-sub-01", # Name of authentication subscription with $automationAccount resource
+	[string]$subId =    "11111111-1111-1111-1111-111111111111", # Subscription Id of authentication subscription
+	[string]$tenantId = "22222222-2222-2222-2222-222222222222", # Tenant Id from which to enumerate target subscriptions for update management history information
+	[string]$staResourceGroup = "umc-rgp-01", # Replace with <your> actual resource group name which contains the $automation account
+    [string]$storageAccountName = "1sta1537", # Replace with <your> actual storage account name where you want to host the reports. The container name is 'reports'
     [string]$targetContainer = "reports", # Feel free to use your own preferred container name here.
 	[string]$transcriptsContainer = "transcripts", # Container in storage account for transcripts
     [string]$queryReportType = "ByMachines", # You can either query by machines or by maintenence runs
@@ -89,7 +89,6 @@ param
 
 # Ensures you do not inherit an AzContext in your runbook
 Disable-AzContextAutosave -Scope Process 
-
 
 Function Connect-ToAzureWithManagedIdentity
 {
