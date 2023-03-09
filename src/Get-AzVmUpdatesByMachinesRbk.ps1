@@ -90,7 +90,6 @@ param
 # Ensures you do not inherit an AzContext in your runbook
 Disable-AzContextAutosave -Scope Process 
 
-$BeginTimer = Get-Date -Verbose
 
 Function Connect-ToAzureWithManagedIdentity
 {
@@ -383,7 +382,6 @@ Set-TlsSecurityProtocolType -Verbose
 #region TRANSCRIPT
 # Create Log file
 [string]$Transcript = $null
-$scriptName = $MyInvocation.MyCommand.name
 # Use script filename without exension as a log prefix
 # $LogPrefix = $scriptName.Split(".")[0]
 $LogPrefix = "Get-AzVMUpdatesByMachinesRbk$queryReportType"
