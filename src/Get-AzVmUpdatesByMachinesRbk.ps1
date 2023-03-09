@@ -76,7 +76,7 @@ param
 	[string]$subId =    "11111111-1111-1111-1111-111111111111", # Subscription Id of authentication subscription
 	[string]$tenantId = "22222222-2222-2222-2222-222222222222", # Tenant Id from which to enumerate target subscriptions for update management history information
 	[string]$staResourceGroup = "umc-rgp-01", # Replace with <your> actual resource group name which contains the $automation account
-    [string]$storageAccountName = "1sta1537", # Replace with <your> actual storage account name where you want to host the reports. The container name is 'reports'
+    [string]$storageAccountName = "1sta1210", # Replace with <your> actual storage account name where you want to host the reports. The container name is 'reports'
     [string]$targetContainer = "reports", # Feel free to use your own preferred container name here.
 	[string]$transcriptsContainer = "transcripts", # Container in storage account for transcripts
     [string]$queryReportType = "ByMachines", # You can either query by machines or by maintenence runs
