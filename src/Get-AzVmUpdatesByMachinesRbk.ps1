@@ -72,7 +72,7 @@ param
     [string]$doubleSeparator = ("-"*$separatorWidth), # The separator used to separate the title from the report
     [string]$singleSeparator = ("-"*$separatorWidth), # The separator used to separate the report sections
 	[string]$automationAccount = "adv-aaa-01", # Name of automation account
-	[string]$sub = "demo-azr-dev-sub-01", # Name of authentication subscription with $automationAccount resource
+	[string]$sub = "azr-app1-dev-sub-01", # Name of authentication subscription with $automationAccount resource
 	[string]$subId =    "11111111-1111-1111-1111-111111111111", # Subscription Id of authentication subscription
 	[string]$tenantId = "22222222-2222-2222-2222-222222222222", # Tenant Id from which to enumerate target subscriptions for update management history information
 	[string]$staResourceGroup = "umc-rgp-01", # Replace with <your> actual resource group name which contains the $automation account
